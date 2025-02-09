@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#cinza1 {
+    color: gray;
+}
+
+#cinza2 {
+    color: rgb(63, 63, 63);
+}
+
+#cinza3 {
+    color: rgb(37, 37, 37);
+}
+
+#cinza4 {
+    color: rgb(0, 0, 0);
+}
+
+#circulos{
+    padding: 0px;
+    scale: 70%;
+}

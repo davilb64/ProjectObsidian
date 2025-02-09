@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>
+        document.addEventListener("contextmenu", event => event.preventDefault()); // Bloqueia clique direito
+        document.addEventListener("keydown", event => {
+            if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
+                event.preventDefault(); // Bloqueia F12 e DevTools
+            }
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 00</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Desafio 00</h2>
+        <p>Olá <b>desafiante</b>, começaremos te testando de forma simples <br> <span id="cinza1">Consegue enxergar? </span><span id="cinza2">E agora? </span><span id="cinza3">
+        Melhor fazer um óculos </span><span id="cinza4">Flag: Talvez</span></p>
+        
+        <input type="text" id="resposta" placeholder="Digite a flag">
+        <button onclick="verificarResposta()">Enviar</button>
+        <p id="resultado"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

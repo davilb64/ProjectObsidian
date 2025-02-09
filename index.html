@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>
+        document.addEventListener("contextmenu", event => event.preventDefault()); // Bloqueia clique direito
+        document.addEventListener("keydown", event => {
+            if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
+                event.preventDefault(); // Bloqueia F12 e DevTools
+            }
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Obsidian</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao Project Obsidian</h1>
+        <p>Os desafios que você enfrentará a seguir foram pensados para que qualquer um com acesso à internet resolva, mas não pense que será fácil. Se encontrar dificuldades, pense fora da caixa. Valerá a pena!</p>
+        <a href="desafio1.html" class="button">Iniciar Protocolo</a>
+    </div>
+</body>
+</html>

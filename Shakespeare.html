@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>
+        document.addEventListener("contextmenu", event => event.preventDefault()); // Bloqueia clique direito
+        document.addEventListener("keydown", event => {
+            if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
+                event.preventDefault(); // Bloqueia F12 e DevTools
+            }
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 00</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Desafio 00</h2>
+        <p>Agora as regras mudam um pouco, não darei mais dicas de nada. Pesquise, procure, o sucesso virá, boa sorte.</p>
+        <hr>
+        
+        <input type="text" id="resposta" placeholder="Digite a flag">
+        <button onclick="verificarResposta()">Enviar</button>
+        <p id="resultado"></p>
+    </div>
+    <script src="shakespeare.js"></script>
+</body>
+</html>
