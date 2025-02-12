@@ -57,3 +57,9 @@ img{
     margin: 10px;
     border-radius: 10px;
 }
+
+code{
+    text-align: left;
+    justify-content: left;
+    color: green;
+}
