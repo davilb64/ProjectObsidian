@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>
+        document.addEventListener("contextmenu", event => event.preventDefault()); // Bloqueia clique direito
+        document.addEventListener("keydown", event => {
+            if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
+                event.preventDefault(); // Bloqueia F12 e DevTools
+            }
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 05</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Desafio 05</h2>
+        <p>🎶🎶🎶</p>
+        <hr><br>
+        <audio autoplay="autoplay" controls="controls">
+            <source src="./morse.wav" type="audio/mp3" />
+            seu navegador não suporta HTML5
+        </audio><br><br>
+        
+        <input type="text" id="resposta" placeholder="Digite a flag">
+        <button onclick="verificarResposta()">Enviar</button>
+        <p id="resultado"></p>
+    </div>
+    <script src="florenca.js"></script>
+</body>
+</html>
