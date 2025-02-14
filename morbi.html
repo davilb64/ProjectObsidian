@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>
+        document.addEventListener("contextmenu", event => event.preventDefault()); // Bloqueia clique direito
+        document.addEventListener("keydown", event => {
+            if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
+                event.preventDefault(); // Bloqueia F12 e DevTools
+            }
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 11</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Desafio 11</h2>
+        <hr>
+        <h3>Francis 🥓🥓</h3>
+        <hr>
+        
+        <p>
+            Bellum
+            Amor
+            Aqua
+            Bonus
+            Brevis
+        </p>
+        
+        <p>
+            Aeternus
+            Arbor
+            Bene
+            Aurum
+            Altus
+        </p>
+        
+        <p>
+            Animus
+            Beatus
+            Bibere
+            Ager
+            Audacia
+        </p>
+        
+        <p>
+            Barbarus
+            Advena
+            Aetas
+            Blandus
+            Avaritia
+        </p>
+        
+        <p>
+            Bos
+            Auxilium
+            Aequalis
+            Baculum
+            Beneficium
+        </p>
+        
+        <p>
+            Balneum
+            Acerbus
+            Ars
+            Aspicio
+            Basium
+        </p>
+        
+        
+        <input type="text" id="resposta" placeholder="Digite a flag">
+        <button onclick="verificarResposta()">Enviar</button>
+        <p id="resultado"></p>
+    </div>
+    <script src="morbi.js"></script>
+</body>
+</html>

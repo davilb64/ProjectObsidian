@@ -55,11 +55,16 @@ body {
 
 img{
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 2px;
 }
 
 code{
     text-align: left;
     justify-content: left;
     color: green;
+}
+
+#dot{
+    margin: 10%;
+    scale: 200%;
 }
