@@ -22,6 +22,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Obsidian</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilização da tabela */
+        .ranking-container {
+            margin: 20px auto;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -29,7 +52,32 @@
         <p>Os desafios que você enfrentará a seguir foram pensados para que qualquer um com acesso à internet resolva, mas não pense que será fácil. Se encontrar dificuldades, pense fora da caixa. Valerá a pena!</p>
         <button onclick="window.location.href='desafio1.html'" class="button">Iniciar Protocolo</button>
     </div>
-    
-    
+
+    <!-- Tabela de ranking -->
+    <div class="ranking-container">
+        <h2>Ranking de Conclusão</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Data de Conclusão</th>
+                    <th>Última Atualização</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                </tr>
+                <!-- Adicione mais linhas manualmente conforme necessário -->
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

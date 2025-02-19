@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>
+        document.addEventListener("contextmenu", event => event.preventDefault()); // Bloqueia clique direito
+        document.addEventListener("keydown", event => {
+            if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
+                event.preventDefault(); // Bloqueia F12 e DevTools
+            }
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fim?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Parabéns!!!</h2>
+        <hr>
+        <h3>Você se provou hábil e merece reconhecimento, coloque seu nome e, em até 3 dias você entrará no ranking!</h3>
+        <h1>Obrigado por participar!!</h1>
+        <form id="ctf-form">
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome..." required>
+            <button type="submit">Enviar</button>
+        </form>
+    
+        <p id="mensagem"></p>
+    
+        <!-- Importa EmailJS -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script>
+            emailjs.init("qXyvf705Uf8tkgO6g"); // Substitua pelo seu User ID do EmailJS
+
+            document.getElementById("ctf-form").addEventListener("submit", function(event) {
+                event.preventDefault(); // Evita o recarregamento da página
+    
+                let nome = document.getElementById("nome").value;
+    
+                emailjs.send("service_uiokun8", "template_9nkmrd8", {
+                    nome: nome
+                })
+                .then(function(response) {
+                    document.getElementById("mensagem").innerText = "Seu nome foi enviado com sucesso!";
+                }, function(error) {
+                    document.getElementById("mensagem").innerText = "Erro ao enviar o nome. Tente novamente.";
+                    console.error("Erro no EmailJS:", error);
+                });
+            });
+        </script>
+    </div>
+    <script src="fim.js"></script>
+</body>
+</html>
